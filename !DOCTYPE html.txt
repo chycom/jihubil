@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jihubil - Jajanan Pedas Teman Setia</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #fcf9f2; color: #333; }
+        
+        /* Header & Hero Section */
+        header { background-color: #da251d; color: white; padding: 20px; text-align: center; }
+        header h1 { font-size: 3em; font-weight: 900; letter-spacing: 2px; text-shadow: 2px 2px #ffb902; }
+        header p { font-size: 1.2em; margin-top: 5px; font-weight: 700; }
+        
+        .hero { background-color: #ffb902; padding: 40px 20px; text-align: center; color: #da251d; }
+        .hero h2 { font-size: 2em; margin-bottom: 15px; font-weight: 900; }
+        .hero p { font-size: 1.1em; color: #333; margin-bottom: 20px; }
+        
+        /* Menu Section */
+        .menu-section { padding: 40px 20px; text-align: center; max-width: 900px; margin: auto; }
+        .menu-section h2 { color: #da251d; font-size: 2.5em; margin-bottom: 30px; }
+        
+        .menu-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .menu-card { 
+            background: white; border-radius: 15px; padding: 20px; width: 300px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 3px solid #ffb902;
+            transition: transform 0.3s;
+        }
+        .menu-card:hover { transform: translateY(-5px); }
+        .menu-card h3 { color: #da251d; font-size: 1.8em; }
+        .menu-card .price { font-size: 1.5em; font-weight: 700; color: #333; margin: 10px 0; }
+        
+        /* Buttons */
+        .btn { 
+            display: inline-block; padding: 12px 25px; font-size: 1.1em; font-weight: bold; 
+            color: white; background-color: #da251d; text-decoration: none; 
+            border-radius: 30px; transition: 0.3s; border: none; cursor: pointer;
+        }
+        .btn:hover { background-color: #b51c15; transform: scale(1.05); }
+        
+        .btn-wa { background-color: #25D366; margin-top: 15px; width: 100%; }
+        .btn-wa:hover { background-color: #1ebe57; }
+        
+        /* Info & Footer */
+        .info-section { background-color: #5a2e2d; color: white; padding: 40px 20px; text-align: center; }
+        .info-section h3 { margin-bottom: 10px; color: #ffb902; }
+        
+        footer { background-color: #333; color: white; text-align: center; padding: 20px; font-size: 0.9em; }
+        footer a { color: #ffb902; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>JIHUBIL</h1>
+        <p>Jajanan Pedas, Teman Setia di Segala Suasana</p>
+    </header>
+
+    <div class="hero">
+        <h2>🔥 OPEN PRE-ORDER 🔥</h2>
+        <p>Tersedia untuk daerah UIN, SUHAT, dan sekitarnya. Cocok buat nemenin nugas atau nongkrong!</p>
+        <a href="#menu" class="btn">Lihat Menu</a>
+    </div>
+
+    <div id="menu" class="menu-section">
+        <h2>Menu Jihubil</h2>
+        <div class="menu-container">
+            
+            <div class="menu-card">
+                <h3>Size SMALL</h3>
+                <p>Porsi pas buat ngemil santai sendirian.</p>
+                <div class="price">IDR 5K</div>
+                <a href="https://wa.me/6285117311544?text=Halo%20Jihubil,%20saya%20mau%20pesan%20Size%20SMALL%20(5K)." target="_blank" class="btn btn-wa">📱 Pesan via WA</a>
+            </div>
+
+            <div class="menu-card">
+                <h3>Size BIG</h3>
+                <p>Porsi puas buat kamu yang lagi laper berat atau mau sharing.</p>
+                <div class="price">IDR 10K</div>
+                <a href="https://wa.me/6285117311544?text=Halo%20Jihubil,%20saya%20mau%20pesan%20Size%20BIG%20(10K)." target="_blank" class="btn btn-wa">📱 Pesan via WA</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="info-section">
+        <h3>Cara Pemesanan</h3>
+        <p>Saat ini Jihubil melayani Pre-Order. Kamu juga bisa menemukan kami di GoFood!</p>
+        <br>
+        <p>📍 <strong>Area Pengiriman:</strong> UIN Malang, Suhat, dan sekitarnya.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Jihubil. All Rights Reserved.</p>
+        <p>Follow IG kami: <a href="https://instagram.com/jihubil" target="_blank">@jihubil</a></p>
+    </footer>
+
+</body>
+</html>

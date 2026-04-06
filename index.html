@@ -3,178 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMB - Penerimaan Mahasiswa Baru</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>JIHÜBIL - Jajanan Pedas Teman Setia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
-        body { background-color: #f4f7f6; color: #333; }
-        h1, h2, h3, .nav-logo { font-family: 'Montserrat', sans-serif; }
-
-        /* Top Bar */
-        .top-bar { background-color: #0d47a1; color: white; padding: 10px 5%; display: flex; justify-content: space-between; font-size: 0.85em; }
-        .top-bar a { color: white; text-decoration: none; margin-left: 15px; }
-
-        /* Navbar */
-        nav { background-color: #ffffff; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .nav-logo { font-size: 1.5em; font-weight: 800; color: #0d47a1; display: flex; align-items: center; gap: 10px; }
-        .nav-logo i { font-size: 1.2em; color: #ffb300; }
-        .nav-links a { color: #333; text-decoration: none; margin: 0 15px; font-weight: 600; transition: 0.3s; }
-        .nav-links a:hover { color: #0d47a1; }
-        .btn-login { background-color: #ffb300; color: #0d47a1 !important; padding: 10px 20px; border-radius: 5px; font-weight: 700; }
-        .btn-login:hover { background-color: #ffa000; }
-
-        /* Hero Section */
-        .hero { background: linear-gradient(rgba(13, 71, 161, 0.85), rgba(13, 71, 161, 0.85)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=1000') center/cover; padding: 100px 5%; color: white; text-align: center; }
-        .hero h1 { font-size: 3.5em; font-weight: 800; margin-bottom: 20px; text-transform: uppercase; }
-        .hero p { font-size: 1.2em; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6; }
-        .hero-btns { display: flex; justify-content: center; gap: 20px; }
-        .btn-primary { background-color: #ffb300; color: #0d47a1; padding: 15px 30px; text-decoration: none; font-weight: 700; border-radius: 5px; font-size: 1.1em; transition: 0.3s; }
-        .btn-primary:hover { background-color: #e6a200; transform: translateY(-3px); }
-        .btn-outline { background-color: transparent; border: 2px solid white; color: white; padding: 15px 30px; text-decoration: none; font-weight: 700; border-radius: 5px; font-size: 1.1em; transition: 0.3s; }
-        .btn-outline:hover { background-color: white; color: #0d47a1; }
-
-        /* Info Section (Timeline/Status) */
-        .status-bar { background-color: white; padding: 30px 5%; margin: -40px 5% 40px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; display: flex; justify-content: space-around; text-align: center; }
-        .status-item h3 { color: #0d47a1; font-size: 1.5em; font-weight: 800; }
-        .status-item p { color: #666; font-size: 0.9em; margin-top: 5px; }
-
-        /* Jalur Pendaftaran */
-        .jalur-section { padding: 60px 5%; text-align: center; }
-        .jalur-section h2 { font-size: 2.5em; color: #0d47a1; margin-bottom: 10px; font-weight: 800; }
-        .jalur-section > p { color: #666; margin-bottom: 40px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        body { background-color: #f8f1e7; color: #2a0800; overflow-x: hidden; }
         
-        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: white; padding: 40px 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; border-top: 5px solid transparent; text-align: left; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-top-color: #0d47a1; }
-        .card i { font-size: 3em; color: #0d47a1; margin-bottom: 20px; }
-        .card h3 { font-size: 1.5em; color: #333; margin-bottom: 15px; }
-        .card p { color: #666; line-height: 1.6; margin-bottom: 20px; font-size: 0.95em; }
-        .card a { color: #0d47a1; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; }
-        .card a:hover { color: #ffb300; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
+        @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { transform: scale(1); } }
 
-        /* Footer */
-        footer { background-color: #0a3578; color: white; padding: 50px 5% 20px; margin-top: 60px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-col h3 { font-size: 1.2em; margin-bottom: 20px; color: #ffb300; }
-        .footer-col p, .footer-col a { color: #ccc; text-decoration: none; line-height: 1.8; font-size: 0.9em; display: block; }
-        .footer-col a:hover { color: white; }
-        .copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; color: #aaa; font-size: 0.85em; }
+        nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; width: 100%; z-index: 1000; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); }
+        nav .brand { font-size: 1.8em; font-weight: 900; color: #da251d; letter-spacing: 1px; }
+        nav .brand span { color: #ffb902; }
+        nav a { background: #da251d; color: white; text-decoration: none; padding: 10px 20px; border-radius: 30px; font-weight: 700; transition: 0.3s; box-shadow: 0 4px 15px rgba(218, 37, 29, 0.3); }
+        nav a:hover { background: #b51c15; transform: translateY(-2px); }
 
-        /* Responsive */
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; background: radial-gradient(circle at top right, #fff4d4 0%, #f8f1e7 100%); padding-top: 80px; flex-wrap: wrap; }
+        .hero-text { flex: 1; min-width: 300px; padding-right: 20px; }
+        .hero-text h1 { font-size: 4em; font-weight: 900; line-height: 1.1; color: #da251d; margin-bottom: 20px; text-shadow: 2px 2px 0px #ffb902; }
+        .hero-text p { font-size: 1.2em; margin-bottom: 30px; color: #555; line-height: 1.6; }
+        
+        .hero-img { flex: 1; min-width: 300px; text-align: center; }
+        .hero-img img { width: 100%; max-width: 500px; animation: float 4s ease-in-out infinite; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15)); }
+
+        .btn-primary { display: inline-block; background: #ffb902; color: #da251d; font-size: 1.2em; font-weight: 900; padding: 15px 40px; border-radius: 50px; text-decoration: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(255, 185, 2, 0.4); border: 2px solid #ffb902; }
+        .btn-primary:hover { background: transparent; transform: translateY(-5px); }
+
+        .menu { padding: 80px 5%; text-align: center; background: white; }
+        .menu h2 { font-size: 3em; color: #da251d; font-weight: 900; margin-bottom: 10px; }
+        .menu > p { font-size: 1.1em; color: #777; margin-bottom: 50px; }
+
+        .cards { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        .card { background: #fdfdfd; width: 350px; border-radius: 25px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 1px solid #eee; transition: 0.4s; position: relative; text-align: left; }
+        .card:hover { transform: translateY(-15px); box-shadow: 0 20px 50px rgba(218, 37, 29, 0.15); border-color: #da251d; }
+        
+        .card-img { width: 100%; height: 300px; background: #eee; overflow: hidden; position: relative; }
+        .card-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .card:hover .card-img img { transform: scale(1.1); }
+        
+        .badge { position: absolute; top: 15px; right: 15px; background: #da251d; color: white; padding: 8px 15px; border-radius: 20px; font-weight: 800; font-size: 0.9em; z-index: 2; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .badge.yellow { background: #ffb902; color: #da251d; }
+
+        .card-content { padding: 30px; }
+        .card-content h3 { font-size: 2em; color: #da251d; font-weight: 900; margin-bottom: 5px; }
+        .card-content p { color: #666; margin-bottom: 20px; font-size: 0.95em; line-height: 1.5; }
+        .price-row { display: flex; justify-content: space-between; align-items: center; border-top: 2px dashed #eee; padding-top: 20px; }
+        .price { font-size: 2.2em; font-weight: 900; color: #2a0800; }
+        
+        .btn-order { background: #25D366; color: white; padding: 12px 25px; border-radius: 12px; text-decoration: none; font-weight: 800; display: flex; align-items: center; gap: 8px; transition: 0.3s; }
+        .btn-order:hover { background: #1ebe57; }
+
+        .float-wa { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2em; text-decoration: none; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4); z-index: 1000; animation: pulse 2s infinite; }
+        
+        footer { background: #da251d; color: white; text-align: center; padding: 40px 20px; }
+        footer .socials { font-size: 1.5em; margin: 20px 0; }
+        footer .socials a { color: white; margin: 0 10px; transition: 0.3s; }
+        footer .socials a:hover { color: #ffb902; }
+
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 2.5em; }
-            .hero-btns { flex-direction: column; }
-            .status-bar { flex-direction: column; gap: 20px; }
+            .hero { flex-direction: column; text-align: center; padding-top: 120px; }
+            .hero-text { padding-right: 0; }
+            .hero-text h1 { font-size: 3em; }
+            .card { width: 100%; }
         }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <div><i class="fa-solid fa-phone"></i> Layanan PMB: (0341) 551354</div>
-        <div>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-        </div>
-    </div>
-
     <nav>
-        <div class="nav-logo">
-            <i class="fa-solid fa-building-columns"></i>
-            <div>
-                PMB UNIVERSITAS<br>
-                <span style="font-size: 0.5em; font-weight: 600; color: #666; letter-spacing: 1px;">TAHUN AKADEMIK 2026/2027</span>
-            </div>
-        </div>
-        <div class="nav-links">
-            <a href="#">Beranda</a>
-            <a href="#">Program Studi</a>
-            <a href="#">Jalur Seleksi</a>
-            <a href="#">Pengumuman</a>
-            <a href="#" class="btn-login"><i class="fa-solid fa-user"></i> Login Pendaftar</a>
-        </div>
+        <div class="brand">JIHÜ<span>BIL</span></div>
+        <a href="#menu"><i class="fa-solid fa-cart-shopping"></i> Order</a>
     </nav>
 
     <section class="hero">
-        <h1>Penerimaan Mahasiswa Baru</h1>
-        <p>Bergabunglah bersama kami untuk menciptakan generasi unggul, berkarakter, dan berdaya saing global. Temukan fakultas impianmu, mulai dari Psikologi, Sains, hingga Humaniora.</p>
-        <div class="hero-btns">
-            <a href="#" class="btn-primary">Daftar Sekarang</a>
-            <a href="#" class="btn-outline">Panduan Pendaftaran <i class="fa-solid fa-download"></i></a>
+        <div class="hero-text">
+            <h1>JAJANAN PEDAS<br>TEMAN SETIA!</h1>
+            <p>Bumbu meresap, pedasnya nendang maksimal. Solusi ngemil paling pas buat nemenin nugas atau nongkrong asik bareng temen. <b>Open Pre-Order area UIN & Sekitarnya!</b></p>
+            <a href="#menu" class="btn-primary"><i class="fa-solid fa-fire"></i> LIHAT MENU</a>
+        </div>
+        <div class="hero-img">
+            <img src="logo.png" alt="Logo Jihubil">
         </div>
     </section>
 
-    <div class="status-bar">
-        <div class="status-item">
-            <h3>SNBP & SNBT</h3>
-            <p>Pendaftaran Ditutup</p>
-        </div>
-        <div class="status-item">
-            <h3>MANDIRI PRESTASI</h3>
-            <p>Sedang Berlangsung (Batas: 30 Mei 2026)</p>
-        </div>
-        <div class="status-item">
-            <h3>MANDIRI TULIS</h3>
-            <p>Segera Dibuka (1 Juni 2026)</p>
-        </div>
-    </div>
-
-    <section class="jalur-section">
-        <h2>Jalur Pendaftaran</h2>
-        <p>Pilih jalur pendaftaran yang sesuai dengan kualifikasi dan prestasimu.</p>
+    <section id="menu" class="menu">
+        <h2>Pilih Porsimu!</h2>
+        <p>Pesan sekarang lewat WhatsApp, makanan langsung diproses.</p>
         
         <div class="cards">
-            <div class="card">
-                <i class="fa-solid fa-medal"></i>
-                <h3>Jalur Prestasi</h3>
-                <p>Diperuntukkan bagi lulusan SMA/sederajat yang memiliki prestasi akademik maupun non-akademik (seperti Hafidz Qur'an atau kejuaraan nasional).</p>
-                <a href="#">Lihat Detail Syarat <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
             
             <div class="card">
-                <i class="fa-solid fa-laptop-file"></i>
-                <h3>Jalur Mandiri Tulis</h3>
-                <p>Seleksi masuk menggunakan ujian tulis berbasis komputer (CBT) yang diselenggarakan secara luring di kampus utama.</p>
-                <a href="#">Lihat Detail Syarat <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="badge yellow"><i class="fa-solid fa-star"></i> Buat Sendiri</div>
+                <div class="card-img">
+                    <img src="small.jpeg" alt="Size Small">
+                </div>
+                <div class="card-content">
+                    <h3>SIZE SMALL</h3>
+                    <p>Porsi pas buat ngemil santai sendirian sambil ngerjain tugas kampus biar gak ngantuk.</p>
+                    <div class="price-row">
+                        <div class="price">5K</div>
+                        <a href="https://wa.me/6285117311544?text=Halo%20Jihubil,%20saya%20mau%20pesan%20Size%20SMALL%20(5K)." target="_blank" class="btn-order">
+                            <i class="fa-brands fa-whatsapp"></i> Pesan
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <div class="card">
-                <i class="fa-solid fa-earth-asia"></i>
-                <h3>Jalur Internasional</h3>
-                <p>Khusus bagi calon mahasiswa asing atau warga negara Indonesia yang berdomisili di luar negeri yang ingin menempuh pendidikan di sini.</p>
-                <a href="#">Lihat Detail Syarat <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="badge"><i class="fa-solid fa-fire-flame-curved"></i> Paling Laris</div>
+                <div class="card-img">
+                    <img src="big.jpeg" alt="Size Big">
+                </div>
+                <div class="card-content">
+                    <h3>SIZE BIG</h3>
+                    <p>Porsi puas buat kamu yang lagi laper berat atau mau sharing bareng temen kosan.</p>
+                    <div class="price-row">
+                        <div class="price">10K</div>
+                        <a href="https://wa.me/6285117311544?text=Halo%20Jihubil,%20saya%20mau%20pesan%20Size%20BIG%20(10K)." target="_blank" class="btn-order">
+                            <i class="fa-brands fa-whatsapp"></i> Pesan
+                        </a>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
     <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h3>Panitia PMB</h3>
-                <p>Gedung Rektorat Lt. 1<br>
-                Jl. Gajayana No. 50, Malang<br>
-                Jawa Timur, Indonesia</p>
-            </div>
-            <div class="footer-col">
-                <h3>Tautan Penting</h3>
-                <a href="#">Fakultas Psikologi</a>
-                <a href="#">Fakultas Sains & Teknologi</a>
-                <a href="#">Cek Kelulusan</a>
-                <a href="#">Bantuan UKT</a>
-            </div>
-            <div class="footer-col">
-                <h3>Hubungi Kami</h3>
-                <p><i class="fa-solid fa-envelope"></i> pmb@kampus-template.ac.id</p>
-                <p><i class="fa-brands fa-whatsapp"></i> +62 811-2233-4455 (Chat Only)</p>
-            </div>
+        <h2>JIHÜBIL</h2>
+        <p>Jajanan Pedas di Segala Suasana</p>
+        <div class="socials">
+            <a href="https://instagram.com/jihu.bil" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/6285117311544" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
-        <div class="copyright">
-            &copy; 2026 Panitia Penerimaan Mahasiswa Baru. All Rights Reserved. (Prototype Design)
-        </div>
+        <p style="font-size: 0.8em; opacity: 0.8;">&copy; 2026 Jihubil. All Rights Reserved. Area Pengiriman: UIN Malang & Sekitarnya.</p>
     </footer>
+
+    <a href="https://wa.me/6285117311544" class="float-wa" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>

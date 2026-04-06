@@ -1500,7 +1500,113 @@
     .radius-8 { border-radius:8px; }
     .radius-9 { border-radius:9px; }
     .radius-10 { border-radius:10px; }
-  </style>
+  
+    [data-theme='dark'] .chip,
+    [data-theme='dark'] .filter-chip,
+    [data-theme='dark'] .search-box,
+    [data-theme='dark'] .sort-select,
+    [data-theme='dark'] .qty-controller,
+    [data-theme='dark'] .meta-pill,
+    [data-theme='dark'] .menu-badge,
+    [data-theme='dark'] .floating-card,
+    [data-theme='dark'] .about-floating,
+    [data-theme='dark'] .mini-box,
+    [data-theme='dark'] .stat-box,
+    [data-theme='dark'] .faq-item,
+    [data-theme='dark'] .summary-card,
+    [data-theme='dark'] .field input,
+    [data-theme='dark'] .field textarea,
+    [data-theme='dark'] .field select,
+    [data-theme='dark'] .modal-card,
+    [data-theme='dark'] .nav-links a:hover,
+    [data-theme='dark'] .nav-links a.active {
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      border-color: rgba(255,255,255,.08);
+    }
+
+    [data-theme='dark'] .search-box input,
+    [data-theme='dark'] .field input,
+    [data-theme='dark'] .field textarea,
+    [data-theme='dark'] .field select,
+    [data-theme='dark'] .sort-select {
+      color: var(--text);
+    }
+
+    [data-theme='dark'] .menu-media,
+    [data-theme='dark'] .menu-image-shape,
+    [data-theme='dark'] .hero-product-wrap,
+    [data-theme='dark'] .faq-cta,
+    [data-theme='dark'] .deal-card {
+      background: linear-gradient(135deg, rgba(42,16,10,.96), rgba(28,10,6,.92));
+      border-color: rgba(255,255,255,.08);
+    }
+
+    [data-theme='dark'] .pack {
+      background: linear-gradient(180deg, #3a130d 0%, #6a210f 30%, #b53a16 62%, #ff8c2a 100%);
+    }
+
+    [data-theme='dark'] .pack .pack-title,
+    [data-theme='dark'] .pack .pack-pill,
+    [data-theme='dark'] .gallery-label {
+      color: #fff4e8;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    [data-theme='dark'] .menu-title p,
+    [data-theme='dark'] .section-subtitle,
+    [data-theme='dark'] .review-card p,
+    [data-theme='dark'] .faq-answer,
+    [data-theme='dark'] .summary-card p,
+    [data-theme='dark'] .stat-box span,
+    [data-theme='dark'] .mini-box span,
+    [data-theme='dark'] .floating-card div:first-child,
+    [data-theme='dark'] .about-floating,
+    [data-theme='dark'] .chip span {
+      color: var(--text-soft);
+    }
+
+    [data-theme='dark'] .btn-ghost {
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.08);
+      color: var(--text);
+    }
+
+    [data-theme='dark'] .btn-primary {
+      color: #421106;
+    }
+
+    [data-theme='dark'] .footer-shell,
+    [data-theme='dark'] .deal-panel {
+      box-shadow: 0 30px 70px rgba(0,0,0,.34);
+    }
+
+    [data-theme='dark'] .fake-map {
+      background: linear-gradient(135deg, rgba(35,12,8,.96), rgba(24,8,5,.92));
+    }
+
+    [data-theme='dark'] .map-line {
+      background: rgba(255,255,255,.08);
+    }
+
+    [data-theme='dark'] .ticker-wrap {
+      border-top: 1px solid rgba(255,255,255,.06);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      background: linear-gradient(90deg, rgba(255,183,3,.08), rgba(255,255,255,.03), rgba(218,37,29,.08));
+    }
+
+    [data-theme='dark'] .ticker-item {
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    [data-theme='dark'] .modal-card .summary-row span:last-child,
+    [data-theme='dark'] .summary-row span:last-child {
+      color: var(--text);
+    }
+</style>
 </head>
 <body data-theme="light">
   <div class="loader-screen" id="loaderScreen">
@@ -1526,11 +1632,8 @@
 
         <nav class="nav-links" id="navLinks">
           <a href="#hero" class="active">Home</a>
-          <a href="#keunggulan">Keunggulan</a>
           <a href="#tentang">Tentang</a>
           <a href="#menu">Menu</a>
-          <a href="#promo">Promo</a>
-          <a href="#galeri">Galeri</a>
           <a href="#testimoni">Testimoni</a>
           <a href="#faq">FAQ</a>
           <a href="#pesan">Pesan</a>
@@ -1674,27 +1777,6 @@
       </div>
     </section>
 
-    <span id="keunggulan" class="section-anchor"></span>
-    <section class="section">
-      <div class="container">
-        <div class="text-center reveal">
-          <div class="badge badge-accent"><i class="fa-solid fa-sparkles"></i> Keunggulan Brand</div>
-          <h2 class="section-title">Bukan cuma enak, tapi juga tampil meyakinkan.</h2>
-          <p class="section-subtitle">Versi baru ini dibikin supaya halaman jualan terasa lebih profesional, lebih menarik, dan lebih siap dipakai sebagai etalase online.</p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card card-glass reveal"><div class="feature-icon"><i class="fa-solid fa-fire-flame-curved"></i></div><h3>Pedas yang bikin nagih</h3><p>Tampilan produk dan copywriting dibuat lebih kuat untuk menonjolkan sensasi pedas yang jadi identitas utama.</p></article>
-          <article class="feature-card card-glass reveal"><div class="feature-icon"><i class="fa-solid fa-layer-group"></i></div><h3>Struktur lebih lengkap</h3><p>Ada hero, menu interaktif, promo, galeri, FAQ, testimonial, form order, dan elemen brand yang lebih matang.</p></article>
-          <article class="feature-card card-glass reveal"><div class="feature-icon"><i class="fa-solid fa-mobile-screen-button"></i></div><h3>Responsif di HP</h3><p>Fokus utama pada pengguna mobile karena mayoritas pembeli datang dari link WhatsApp, bio IG, atau story.</p></article>
-          <article class="feature-card card-glass reveal"><div class="feature-icon"><i class="fa-solid fa-bolt"></i></div><h3>Interaksi lebih hidup</h3><p>Ada filter menu, counter, countdown promo, modal, toast, dan simulasi order agar pengalaman terasa modern.</p></article>
-          <article class="feature-card card-glass reveal"><div class="feature-icon"><i class="fa-solid fa-brush"></i></div><h3>Visual lebih premium</h3><p>Desain memakai glassmorphism, gradient, shadow lembut, dan komposisi warna yang lebih hidup.</p></article>
-          <article class="feature-card card-glass reveal"><div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div><h3>Lebih meyakinkan untuk jualan</h3><p>Calon pembeli lebih cepat paham produk, harga, nilai, dan cara pesan tanpa harus bertanya banyak.</p></article>
-          <article class="feature-card card-glass reveal"><div class="feature-icon"><i class="fa-solid fa-store"></i></div><h3>Brand terasa lebih serius</h3><p>Halaman ini bisa dipakai sebagai mini storefront untuk tugas bisnis, jualan kampus, atau portofolio usaha.</p></article>
-          <article class="feature-card card-glass reveal"><div class="feature-icon"><i class="fa-solid fa-share-nodes"></i></div><h3>Enak dibagikan</h3><p>Tinggal kirim link ke teman, grup, atau pelanggan. Sudah ada CTA yang jelas untuk konversi order.</p></article>
-        </div>
-      </div>
-    </section>
-
     <span id="tentang" class="section-anchor"></span>
     <section class="section">
       <div class="container about-layout">
@@ -1721,7 +1803,7 @@
           <p class="section-subtitle" style="margin-left:0;max-width:100%;text-align:left;">Section tambahan seperti promo, testimoni, FAQ, dan form order bikin calon pembeli lebih cepat mengambil keputusan tanpa harus bolak-balik chat untuk tanya hal dasar.</p>
           <p class="section-subtitle" style="margin-left:0;max-width:100%;text-align:left;">Kalau nanti kamu mau, halaman ini masih bisa dikembangkan lagi jadi versi full online shop, lengkap dengan checkout, stok, dashboard admin, dan integrasi pembayaran.</p>
           <div class="hero-cta u-mt-24">
-            <a href="#promo" class="btn btn-secondary"><i class="fa-solid fa-ticket"></i> Lihat Promo</a>
+            <a href="#menu" class="btn btn-secondary"><i class="fa-solid fa-utensils"></i> Lihat Menu</a>
             <a href="#pesan" class="btn btn-ghost"><i class="fa-solid fa-paper-plane"></i> Isi Form Pesan</a>
           </div>
         </div>
@@ -1765,54 +1847,6 @@
             </div>
             <div class="menu-grid" id="menuGrid"></div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <span id="promo" class="section-anchor"></span>
-    <section class="section-sm">
-      <div class="container">
-        <div class="deal-panel card-glass reveal">
-          <div class="deal-copy">
-            <div class="badge" style="background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.18);"><i class="fa-solid fa-bolt"></i> Promo Pre-Order Minggu Ini</div>
-            <h3>Beli lebih banyak, makin puas, makin worth it.</h3>
-            <p>Gunakan section promo ini untuk menciptakan urgensi. Pengunjung jadi terdorong pesan lebih cepat karena ada countdown dan penawaran terbatas.</p>
-            <div class="hero-cta">
-              <a href="#pesan" class="btn btn-primary"><i class="fa-solid fa-cart-plus"></i> Klaim Promo</a>
-              <button class="btn btn-ghost" id="copyPromoBtn"><i class="fa-solid fa-copy"></i> Copy Kode Promo</button>
-            </div>
-            <div class="countdown" id="countdown"></div>
-          </div>
-          <div class="deal-card">
-            <h4 style="font-size:1.3rem;font-weight:900;margin-bottom:10px;">Paket Promo Kampus</h4>
-            <div class="chip" style="width:100%;justify-content:flex-start;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.14);margin-bottom:10px;"><i class="fa-solid fa-check"></i> 2x SMALL = bonus sambal ekstra</div>
-            <div class="chip" style="width:100%;justify-content:flex-start;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.14);margin-bottom:10px;"><i class="fa-solid fa-check"></i> 1x BIG + 1x SMALL = hemat 2K</div>
-            <div class="chip" style="width:100%;justify-content:flex-start;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.14);margin-bottom:10px;"><i class="fa-solid fa-check"></i> Minimal 3 porsi = prioritas diproses</div>
-            <div class="chip" style="width:100%;justify-content:flex-start;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.14);margin-bottom:10px;"><i class="fa-solid fa-check"></i> Cocok buat teman kos, kelas, atau nongkrong</div>
-            <div class="u-mt-20" style="font-size:3rem;font-weight:900;line-height:1;">PROMO10</div>
-            <p style="opacity:.9;margin-top:12px;">Kode promo ini bisa langsung dicopy untuk dipakai saat chat order via WhatsApp.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <span id="galeri" class="section-anchor"></span>
-    <section class="section">
-      <div class="container">
-        <div class="text-center reveal">
-          <div class="badge badge-accent"><i class="fa-solid fa-camera-retro"></i> Visual Brand</div>
-          <h2 class="section-title">Galeri konsep yang bikin produk terasa lebih hidup.</h2>
-          <p class="section-subtitle">Belum ada foto profesional? Tetap bisa dibuat menarik dengan visual placeholder yang estetik, layout variatif, dan label yang informatif.</p>
-        </div>
-        <div class="gallery-grid" id="galleryGrid">
-          <div class="gallery-item wide reveal" data-gallery-label="Packaging hero"><div class="gallery-label">Packaging hero</div></div>
-          <div class="gallery-item reveal" data-gallery-label="Close-up bumbu"><div class="gallery-label">Close-up bumbu</div></div>
-          <div class="gallery-item tall reveal" data-gallery-label="Porsi big"><div class="gallery-label">Porsi big</div></div>
-          <div class="gallery-item reveal" data-gallery-label="Mood nongkrong"><div class="gallery-label">Mood nongkrong</div></div>
-          <div class="gallery-item reveal" data-gallery-label="Pedas level"><div class="gallery-label">Pedas level</div></div>
-          <div class="gallery-item wide reveal" data-gallery-label="PO area kampus"><div class="gallery-label">PO area kampus</div></div>
-          <div class="gallery-item reveal" data-gallery-label="Sauce splash"><div class="gallery-label">Sauce splash</div></div>
-          <div class="gallery-item reveal" data-gallery-label="Snack time"><div class="gallery-label">Snack time</div></div>
         </div>
       </div>
     </section>
@@ -1931,8 +1965,8 @@
           </div>
         </div>
         <div class="footer-links">
-          <div><h4>Navigasi</h4><a href="#hero">Home</a><a href="#menu">Menu</a><a href="#promo">Promo</a><a href="#pesan">Pesan</a></div>
-          <div><h4>Highlight</h4><a href="#keunggulan">Keunggulan</a><a href="#galeri">Galeri</a><a href="#testimoni">Testimoni</a><a href="#faq">FAQ</a></div>
+          <div><h4>Navigasi</h4><a href="#hero">Home</a><a href="#menu">Menu</a><a href="#pesan">Pesan</a></div>
+          <div><h4>Highlight</h4><a href="#tentang">Tentang</a><a href="#testimoni">Testimoni</a><a href="#faq">FAQ</a></div>
           <div><h4>Kontak</h4><a href="https://wa.me/6285117311544" target="_blank">WhatsApp</a><a href="https://instagram.com/jihu.bil" target="_blank">Instagram</a><a href="#pesan">Order cepat</a><a href="#hero">Back to top</a></div>
         </div>
       </div>
